@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\omur-git\\sprint-evaluation\\sprint\\sprint3\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hy\\values-hy.xml",
+            "outputFile": "D:\\omur-git\\react-native\\projects\\Project-009-News-Page-React-Native-01-\\newsPage\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hy\\values-hy.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pcomur\\.gradle\\caches\\transforms-2\\files-2.1\\1cb9b9ea592aa2ea85233be252327dcf\\appcompat-1.1.0\\res\\values-hy\\values-hy.xml",

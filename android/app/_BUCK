@@ -35,12 +35,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.sprint3",
+    package = "com.newspage",
 )
 
 android_resource(
     name = "res",
-    package = "com.sprint3",
+    package = "com.newspage",
     res = "src/main/res",
 )
 

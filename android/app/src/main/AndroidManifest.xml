@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.sprint3">
+  package="com.newspage">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

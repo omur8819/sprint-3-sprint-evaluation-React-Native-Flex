@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.sprint3"
+        applicationId "com.newspage"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

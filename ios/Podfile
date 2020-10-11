@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'sprint3' do
+target 'newsPage' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'sprint3Tests' do
+  target 'newsPageTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -23,10 +23,10 @@ target 'sprint3' do
   end
 end
 
-target 'sprint3-tvOS' do
-  # Pods for sprint3-tvOS
+target 'newsPage-tvOS' do
+  # Pods for newsPage-tvOS
 
-  target 'sprint3-tvOSTests' do
+  target 'newsPage-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
