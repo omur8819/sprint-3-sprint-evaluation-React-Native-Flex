@@ -1,107 +1,117 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  Image,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-  TextInput,
-  TouchableOpacity,
-  textContentType,
-} from 'react-native';
+import {Text, View, StyleSheet} from 'react-native';
+
 const App = () => {
-  return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={styles.main1}>
-        <View style={styles.grayBox}>
-          <View style={styles.orangeBox}>
+  return(
+    <View style={styles.container}>
+      <View style={styles.upper}>
+        <View style={styles.gray}>
+          <View style={styles.orange}>
             <Text style={styles.orangeText}>Orange Circle</Text>
           </View>
-          <View style={styles.yellowBox}>
+          <View style={styles.yellow}>
             <Text style={styles.yellowText}>Yellow Box</Text>
           </View>
         </View>
       </View>
-      <View style={styles.main2}>
-        <View style={styles.blackBox}>
+      <View style={styles.below}>
+        <View style={styles.black}>
           <Text style={styles.blackText}>Black Box</Text>
         </View>
-        <View style={styles.brownBox}>
-          <Text style={styles.brownText}>Brown Box</Text>
+        <View style={styles.brown}>
+  <Text style={styles.brownText}>Brown{'\n'}Box</Text>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
+
+
+
 const styles = StyleSheet.create({
-  main1: {
-    backgroundColor: 'red',
+  container: {
+    flex:1,
+    backgroundColor: 'red'
+  },
+
+  upper: {
+    flex:4
+  },
+
+  gray: {
     flex: 1,
-    justifyContent: 'center',
-  },
-  main2: {
-    backgroundColor: 'pink',
-    flex: 2,
     flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-  },
-  grayBox: {
     backgroundColor: 'gray',
-    flexDirection: 'row',
-    alignItems:"center",
-    justifyContent: 'space-around',
-    height: 220,
-    marginLeft: 20,
-    marginRight: 20,
+    margin: 15,
+    borderRadius: 5,
+    alignItems: 'center',
+    justifyContent: 'space-around'
   },
-  orangeBox: {
+
+  orange: {
     backgroundColor: 'orange',
+    width: 100,
     height: 100,
-    width: 100,
     borderRadius: 50,
-    justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
+
   orangeText: {
-    fontWeight: 'bold',
-    textAlign: 'center',
+    fontWeight: "bold"
   },
-  yellowBox: {
-    backgroundColor: 'yellow',
-    height: 50,
+
+  yellow: {
     width: 100,
+    height: 50,
     borderRadius: 20,
-    justifyContent: 'center',
+    backgroundColor: 'yellow',
+    alignItems: 'center',
+    justifyContent: 'center'  
   },
+
   yellowText: {
-    textAlign: 'center',
+    color: '#212121'
   },
-  blackBox: {
+
+  below: {
+    flex: 6,
+    backgroundColor: 'pink',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    flexDirection: 'row'
+  },
+
+  black: {
     backgroundColor: 'black',
-    height: 450,
-    width: 200,
-    borderRadius: 20,
-    justifyContent: 'center',
+    height: '85%',
+    width: '45%',
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
+
   blackText: {
-    fontWeight: 'bold',
-    color: 'white',   
-    textAlign:"center"
-  },
-  brownBox: {
-    backgroundColor: 'brown',
-    height: 480,
-    width: 70,
-    borderRadius: 90,
-    justifyContent: 'center',
-  },
-  brownText: {
-    transform: [{ rotate: '-90deg' }],
-    fontWeight: 'bold',
     color: 'white',
-    textAlign: 'center'
+    fontWeight: 'bold'
   },
-});
+
+  brown: {
+    backgroundColor: 'brown',
+    width: '20%',
+    height: '90%',
+    borderRadius: 35,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  brownText: {
+    color: 'white',
+    transform: [{ rotate: '270deg' }],
+    fontWeight: 'bold'
+  }
+
+})
+
+
 export default App;
