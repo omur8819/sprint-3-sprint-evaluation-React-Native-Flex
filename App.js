@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
   brownText: {
     transform: [{ rotate: '-90deg' }],
     fontWeight: 'bold',
-    
+    color: 'white',
     textAlign: 'center'
   },
 });
