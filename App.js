@@ -1,9 +1,9 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {SafeAreaView,View, Text,  StyleSheet} from 'react-native';
 
 const App = () => {
   return(
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.upper}>
         <View style={styles.gray}>
           <View style={styles.orange}>
@@ -22,7 +22,7 @@ const App = () => {
   <Text style={styles.brownText}>Brown{'\n'}Box</Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
 
   upper: {
-    flex:4
+    flex:3
   },
 
   gray: {
@@ -50,19 +50,20 @@ const styles = StyleSheet.create({
 
   orange: {
     backgroundColor: 'orange',
-    width: 100,
-    height: 100,
-    borderRadius: 50,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
     alignItems: 'center',
     justifyContent: 'center'
   },
 
   orangeText: {
+    fontSize: 18,
     fontWeight: "bold"
   },
 
   yellow: {
-    width: 100,
+    width: 120,
     height: 50,
     borderRadius: 20,
     backgroundColor: 'yellow',
@@ -71,7 +72,8 @@ const styles = StyleSheet.create({
   },
 
   yellowText: {
-    color: '#212121'
+    fontSize: 16,
+    color: 'black'
   },
 
   below: {
@@ -85,14 +87,15 @@ const styles = StyleSheet.create({
   black: {
     backgroundColor: 'black',
     height: '85%',
-    width: '45%',
-    borderRadius: 15,
+    width: '55%',
+    borderRadius: 25,
     alignItems: 'center',
     justifyContent: 'center'
   },
 
   blackText: {
     color: 'white',
+    fontSize: 20,
     fontWeight: 'bold'
   },
 
@@ -100,13 +103,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'brown',
     width: '20%',
     height: '90%',
-    borderRadius: 35,
+    borderRadius: 45,
     alignItems: 'center',
     justifyContent: 'center'
   },
 
   brownText: {
     color: 'white',
+    fontSize: 20,
     transform: [{ rotate: '270deg' }],
     fontWeight: 'bold'
   }
