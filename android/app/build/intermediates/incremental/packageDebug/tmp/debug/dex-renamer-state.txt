@@ -1,4 +1,4 @@
-#Wed Oct 07 16:16:29 TRT 2020
-base.0=D\:\\omur-git\\react-native\\projects\\Project-009-News-Page-React-Native-01-\\newsPage\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Mon Oct 12 00:26:50 TRT 2020
+base.0=D\:\\omur-git\\sprint-evaluation\\sprint\\sprint3\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

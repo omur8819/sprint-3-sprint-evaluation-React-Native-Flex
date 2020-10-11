@@ -1,121 +1,114 @@
-import React from 'react';
-import {SafeAreaView,View, Text,  StyleSheet} from 'react-native';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
 
-const App = () => {
-  return(
-    <SafeAreaView style={styles.container}>
-      <View style={styles.upper}>
-        <View style={styles.gray}>
-          <View style={styles.orange}>
-            <Text style={styles.orangeText}>Orange Circle</Text>
+import React from 'react';
+import {
+  SafeAreaView,
+  StyleSheet,
+  ScrollView,
+  View,
+  Text,
+  StatusBar,
+} from 'react-native';
+
+import {
+  Header,
+  LearnMoreLinks,
+  Colors,
+  DebugInstructions,
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+
+const App: () => React$Node = () => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <ScrollView
+          contentInsetAdjustmentBehavior="automatic"
+          style={styles.scrollView}>
+          <Header />
+          {global.HermesInternal == null ? null : (
+            <View style={styles.engine}>
+              <Text style={styles.footer}>Engine: Hermes</Text>
+            </View>
+          )}
+          <View style={styles.body}>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Step One</Text>
+              <Text style={styles.sectionDescription}>
+                Edit <Text style={styles.highlight}>App.js</Text> to change this
+                screen and then come back to see your edits.
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>See Your Changes</Text>
+              <Text style={styles.sectionDescription}>
+                <ReloadInstructions />
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Debug</Text>
+              <Text style={styles.sectionDescription}>
+                <DebugInstructions />
+              </Text>
+            </View>
+            <View style={styles.sectionContainer}>
+              <Text style={styles.sectionTitle}>Learn More</Text>
+              <Text style={styles.sectionDescription}>
+                Read the docs to discover what to do next:
+              </Text>
+            </View>
+            <LearnMoreLinks />
           </View>
-          <View style={styles.yellow}>
-            <Text style={styles.yellowText}>Yellow Box</Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.below}>
-        <View style={styles.black}>
-          <Text style={styles.blackText}>Black Box</Text>
-        </View>
-        <View style={styles.brown}>
-  <Text style={styles.brownText}>Brown{'\n'}Box</Text>
-        </View>
-      </View>
-    </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
+    </>
   );
 };
 
-
-
 const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    backgroundColor: 'red'
+  scrollView: {
+    backgroundColor: Colors.lighter,
   },
-
-  upper: {
-    flex:3
+  engine: {
+    position: 'absolute',
+    right: 0,
   },
-
-  gray: {
-    flex: 1,
-    flexDirection: 'row',
-    backgroundColor: 'gray',
-    margin: 15,
-    borderRadius: 5,
-    alignItems: 'center',
-    justifyContent: 'space-around'
+  body: {
+    backgroundColor: Colors.white,
   },
-
-  orange: {
-    backgroundColor: 'orange',
-    width: 120,
-    height: 120,
-    borderRadius: 60,
-    alignItems: 'center',
-    justifyContent: 'center'
+  sectionContainer: {
+    marginTop: 32,
+    paddingHorizontal: 24,
   },
-
-  orangeText: {
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: '600',
+    color: Colors.black,
+  },
+  sectionDescription: {
+    marginTop: 8,
     fontSize: 18,
-    fontWeight: "bold"
+    fontWeight: '400',
+    color: Colors.dark,
   },
-
-  yellow: {
-    width: 120,
-    height: 50,
-    borderRadius: 20,
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center'  
+  highlight: {
+    fontWeight: '700',
   },
-
-  yellowText: {
-    fontSize: 16,
-    color: 'black'
+  footer: {
+    color: Colors.dark,
+    fontSize: 12,
+    fontWeight: '600',
+    padding: 4,
+    paddingRight: 12,
+    textAlign: 'right',
   },
-
-  below: {
-    flex: 6,
-    backgroundColor: 'pink',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    flexDirection: 'row'
-  },
-
-  black: {
-    backgroundColor: 'black',
-    height: '85%',
-    width: '55%',
-    borderRadius: 25,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  blackText: {
-    color: 'white',
-    fontSize: 20,
-    fontWeight: 'bold'
-  },
-
-  brown: {
-    backgroundColor: 'brown',
-    width: '20%',
-    height: '90%',
-    borderRadius: 45,
-    alignItems: 'center',
-    justifyContent: 'center'
-  },
-
-  brownText: {
-    color: 'white',
-    fontSize: 20,
-    transform: [{ rotate: '270deg' }],
-    fontWeight: 'bold'
-  }
-
-})
-
+});
 
 export default App;
